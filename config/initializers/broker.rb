@@ -5,7 +5,7 @@ BROKER_TYPE = ENV['BROKER_TYPE'] || 'rabbitmq'
 
 case BROKER_TYPE
 when 'rabbitmq'
-  BROKER_CONN = Bunny.new(ENV['RABBITMQ_URL'] || 'amqp://guest:guest@localhost:5672')
+  BROKER_CONN = Bunny.new(ENV['RABBITMQ_URL'] || 'amqp://admin:Root2026@localhost:5672')
   BROKER_CONN.start
   BROKER_CHANNEL = BROKER_CONN.create_channel
 when 'kafka'
