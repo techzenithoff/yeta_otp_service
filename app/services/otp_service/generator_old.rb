@@ -1,5 +1,5 @@
-module Services
-    module Otp
+#module Services
+    module OtpService
         class GeneratorOld
             def self.generate!(params)
                 code = SecureRandom.random_number(10**6).to_s.rjust(6,'0')
@@ -13,4 +13,4 @@ module Services
             end
         end
     end
-end
+#end

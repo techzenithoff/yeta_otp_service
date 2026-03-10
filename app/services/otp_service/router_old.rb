@@ -1,5 +1,5 @@
-module Services
-    module Otp
+#module Services
+    module OtpService
         class RouterOld
             def self.send_otp(otp)
                 message = "Your OTP code"
@@ -15,4 +15,4 @@ module Services
             end
         end
     end
-end
+#end

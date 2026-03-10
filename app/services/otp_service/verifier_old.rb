@@ -1,5 +1,5 @@
-module Services
-    module Otp
+#module Services
+    module OtpService
         class VerifierOld
             def self.verify!(params)
 
@@ -16,4 +16,4 @@ module Services
             end
         end
     end
-end
+#end

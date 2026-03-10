@@ -1,4 +1,4 @@
-module Services
+#module Services
     module Channels
         class SmsService
             def self.send_otp(to, message)
@@ -6,4 +6,4 @@ module Services
             end
         end
     end
-end
+#end
