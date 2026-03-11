@@ -1,8 +1,10 @@
 module Api
     module V1
-        class OtpsController < ApplicationController
+        class OtpsController < ApiController
 
             include InternalAuth
+            
+            skip_before_action :authenticate_account!
             
         rescue_from StandardError, with: :handle_error
 
