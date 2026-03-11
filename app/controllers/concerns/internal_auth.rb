@@ -9,9 +9,16 @@ module InternalAuth
 
     def authenticate_service!
         token = request.headers["Authorization"]&.split(" ")&.last
+        Rails.logger.info("[InternalAuth] authenticate_service! called, token present: #{token.present?}")
 
         unless token == ENV["INTERNAL_SERVICE_TOKEN"]
-        render json: { error: "Unauthorized service" }, status: :unauthorized
+            Rails.logger.warn("[InternalAuth] Unauthorized service attempt")
+            render json: { error: "Unauthorized service" }, status: :unauthorized
+        else
+            Rails.logger.info("[InternalAuth] Service authorized successfully")
         end
+    rescue => e
+        Rails.logger.error("[InternalAuth] Error in authenticate_service!: #{e.message}")
+        raise
     end
 end
