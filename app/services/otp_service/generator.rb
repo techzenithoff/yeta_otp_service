@@ -2,7 +2,8 @@ module OtpService
     class Generator
         #OTP_EXPIRATION = 5.minutes
         OTP_EXPIRATION = 1.minutes
-        RESEND_INTERVAL = 30.seconds
+        RESEND_INTERVAL = 60.seconds
+        
 
         def self.generate!(params)
             identifier = params[:identifier]
