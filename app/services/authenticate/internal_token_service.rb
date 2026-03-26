@@ -13,7 +13,8 @@ module Authenticate
 
     # --- CONFIGURATION ---
     ALGORITHM    = 'RS256'
-    SERVICE_NAME = ENV.fetch("SERVICE_NAME") { raise MissingConfigError, "SERVICE_NAME manquant" }
+    #SERVICE_NAME = ENV.fetch("SERVICE_NAME") { raise MissingConfigError, "SERVICE_NAME manquant" }
+    SERVICE_NAME = ENV.fetch("SERVICE_NAME", "otp-service")
     INTERNAL_TOKEN_EXPIRATION = Integer(ENV.fetch("INTERNAL_TOKEN_EXPIRATION") { 60 })
     
     # Ma clé privée pour SIGNER les messages que j'envoie

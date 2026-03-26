@@ -8,7 +8,8 @@ module Authenticate
 
     # Correction du nom ici pour correspondre à la méthode du bas
     INTERNAL_TOKEN_EXPIRATION = Integer(ENV.fetch("INTERNAL_TOKEN_EXPIRATION") { 60 })
-    SERVICE_NAME = ENV.fetch("SERVICE_NAME") { raise TokenError, "SERVICE_NAME manquant" }
+    #SERVICE_NAME = ENV.fetch("SERVICE_NAME") { raise TokenError, "SERVICE_NAME manquant" }
+    SERVICE_NAME = ENV.fetch("SERVICE_NAME", "otp-service")
 
     ALGORITHM = 'RS256'.freeze
 
