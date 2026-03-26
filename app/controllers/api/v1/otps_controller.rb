@@ -2,7 +2,7 @@ module Api
     module V1
         class OtpsController < ApiController
 
-            include InternalAuth
+            include InternalAuthenticate
             
             skip_before_action :authenticate_account!
             
