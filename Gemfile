@@ -96,7 +96,7 @@ gem 'redis', '~> 4.0'
 gem 'sidekiq', '~> 7.3', '>= 7.3.9'
 gem 'bcrypt'
 
-gem 'dotenv-rails', groups: [:development, :test, :production]
+gem 'dotenv-rails', groups: [:development, :test]
 
 #gem 'bunny'
 gem 'bunny', '~> 2.24'
