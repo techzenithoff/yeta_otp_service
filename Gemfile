@@ -96,7 +96,7 @@ gem 'redis', '~> 4.0'
 gem 'sidekiq', '~> 7.3', '>= 7.3.9'
 gem 'bcrypt'
 
-gem 'dotenv', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test, :production]
 
 #gem 'bunny'
 gem 'bunny', '~> 2.24'
@@ -111,4 +111,5 @@ gem 'jwt', '~> 3.1', '>= 3.1.2'
 # HTTP
 #gem 'faraday'
 gem 'faraday', '~> 2.14', '>= 2.14.1'
+gem 'httparty', '~> 0.23.2'
 

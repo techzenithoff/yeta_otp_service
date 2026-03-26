@@ -33,3 +33,5 @@
 
 # Variables d'environnement
 .env*
+
+/keys/*
